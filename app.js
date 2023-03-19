@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const AppError = require('./utils/AppError');
+const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');

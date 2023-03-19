@@ -1,7 +1,7 @@
 const catchAsync = require('../utils/catchAsync');
 const Tour = require('../models/tourModel');
 const Booking = require('../models/bookingModel');
-const AppError = require('../utils/AppError');
+const AppError = require('../utils/appError');
 const User = require('../models/userModel');
 exports.getOverview = catchAsync(async (req, res) => {
   const tours = await Tour.find();
