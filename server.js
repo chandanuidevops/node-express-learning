@@ -9,7 +9,8 @@ const app = require('./app');
 
 
 mongoose
-  .connect(DB, {
+  // .connect(DB, {
+    .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,

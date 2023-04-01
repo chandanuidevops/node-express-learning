@@ -16,7 +16,9 @@ router
     authController.restrictTo('admin', 'lead-guide'),
     tourController.createTour
   );
-
+  router
+  .route('/top-5-cheap')
+  .get(tourController.aliasTopTours, tourController.getAllTours);
 router
   .route('/:id')
   .get(tourController.getTour)
@@ -30,9 +32,7 @@ router
     authController.restrictTo('admin', 'lead-guide'),
     tourController.deleteTour
   );
-router
-  .route('/top-5-cheap')
-  .get(tourController.aliasTopTours, tourController.getAllTours);
+
 router.route('/get-stats').get(tourController.getTourStats);
 router
   .route('/monthly-plan/:year')
